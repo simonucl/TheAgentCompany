@@ -22,7 +22,7 @@ PLANE_HEADERS = {
     "Content-Type": "application/json"
 }
 agent_definitions = []
-with open('/rocketchat/npc_definition.json', 'r') as file:
+with open('rocketchat/npc/npc_definition.json', 'r') as file:
     agent_definitions = json.load(file)
     print(f"NPC definitions loaded, number of NPCs = {len(agent_definitions)}")
 HOSTNAME = os.getenv('HOSTNAME', "localhost")
@@ -66,7 +66,7 @@ def create_rocketchat_client(username='theagentcompany', password='theagentcompa
     return None
 
 def wait_for_redis(host='localhost', port=6379, password='theagentcompany', retries=3, delay=1):
-    client = redis.StrictRedis(host=host, port=port, password=password)
+    client = redis.StrictRedis(host=host, port=port, password=password, username='theagentcompany')
     
     for attempt in range(retries):
         try:

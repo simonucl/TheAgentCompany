@@ -31,8 +31,8 @@ services:
     ports:
       - "8092:80"
     environment:
-      - OWNCLOUD_DOMAIN=the-agent-company.com:8092
-      - OWNCLOUD_TRUSTED_DOMAINS=localhost,the-agent-company.com:8092
+      - OWNCLOUD_DOMAIN=155.138.215.220:8092
+      - OWNCLOUD_TRUSTED_DOMAINS=localhost,the-agent-company.com:8092,155.138.215.220,155.138.215.220:8092
       - OWNCLOUD_ADMIN_USERNAME=theagentcompany
       - OWNCLOUD_ADMIN_PASSWORD=theagentcompany
     extra_hosts:

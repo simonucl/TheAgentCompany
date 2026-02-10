@@ -13,7 +13,7 @@ rm-plane-volume:
 
 start-plane: download-setup
 	./setup.sh start
-	make reset-plane
+	# make reset-plane
 
 start-plane-without-data:
 	./setup.sh start
